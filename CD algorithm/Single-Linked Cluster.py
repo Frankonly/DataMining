@@ -6,7 +6,7 @@ data = [[0,662,877,255,412,966],[662,0,295,468,268,400],[877,295,0,754,564,138],
 def SLCluster(distmatrix,k):
     clusters = [[i] for i in range(len(distmatrix))]
     abandon = [False for i in range(len(distmatrix))]
-    newDist = distmatrix
+    newDist = distmatrix.copy()
     for _ in range(len(clusters) - k):
         minDist = 1000 #根据情况改参数
         x,y = 0,0
