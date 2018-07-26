@@ -3,7 +3,7 @@ data = [[0,662,877,255,412,966],[662,0,295,468,268,400],[877,295,0,754,564,138],
 [255,468,754,0,219,869],[412,268,564,219,0,669],[996,400,138,869,669,0]]
 
 # distmatrix是距离矩阵(二维数组)，k为最后的cluster数量,如果单点过多会被迫停止
-def SLCluster(distmatrix,k):
+def CLCluster(distmatrix,k):
     clusters = [[i] for i in range(len(distmatrix))]
     abandon = [False for i in range(len(distmatrix))]
     newDist = distmatrix
@@ -31,10 +31,10 @@ def SLCluster(distmatrix,k):
                     newDist[x][i] = newDist[i][x] = max(newDist[x][i],newDist[y][i])
         clusters[x].extend(clusters[y])
         # test
-        finalClusters = [clusters[i] for i in range(len(clusters)) if not abandon[i]]
-        print(finalClusters)
+        # finalClusters = [clusters[i] for i in range(len(clusters)) if not abandon[i]]
+        # print(finalClusters)
     finalClusters = [clusters[i] for i in range(len(clusters)) if not abandon[i]]
     return finalClusters
 
 # test running
-print(SLCluster(data,1))
+print(CLCluster(data,1))
