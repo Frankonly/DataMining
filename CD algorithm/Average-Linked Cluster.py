@@ -3,8 +3,16 @@ copy = data.copy()
 length = len(data)
 
 cluster = [[i] for i in range(length)]
+#计算各聚簇之间距离的平均值
 def cal_ave(i,j,cluster):
     return sum(data[a][b] for a in cluster[i] for b in cluster[j])/(len(cluster[i])*len(cluster[j]))
+#计算各聚簇之间距离的最大值
+def cal_max(i,j,cluster):
+    return max(data[a][b] for a in cluster[i] for b in cluster[j])
+#计算各聚簇之间距离的最小值
+def cal_min(i,j,cluster):
+    return min(data[a][b] for a in cluster[i] for b in cluster[j])
+#在新的距离矩阵之间寻找最小的值及这个值对应的下标
 def find_min(M):
     minvalue = 1000
     x = 0;y = 0
