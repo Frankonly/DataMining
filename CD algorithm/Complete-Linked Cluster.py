@@ -8,14 +8,14 @@ def CLCluster(distmatrix,k):
     abandon = [False for i in range(len(distmatrix))]
     newDist = distmatrix
     for _ in range(len(clusters) - k):
-        minDist = 1000 #根据情况改参数
+        minDist = 1000 # 根据情况改参数 change when needed
         x,y = 0,0
         for i in range(len(newDist)):
             if not abandon[i]:
                for j in range(i+1,len(newDist[i])):
                     if not abandon[j] and newDist[i][j] < minDist and newDist[i][j] != -1: # newDist[i][j] == 0 means there is no edge between the two vertices.
                         minDist,x,y = newDist[i][j],i,j
-        if minDist == 0:
+        if minDist == 1000: # 根据情况改参数 change when needed
             print("can't merge anymore")
             break
         if len(clusters[x]) < len(clusters[y]): # Faster: merge the smaller one into the larger one. 
