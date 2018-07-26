@@ -1,15 +1,15 @@
-def hierarchyCluster(distmatrix,n,method):
-    """Get hierarchy clusters from similarity matrix.
+def hierarchicalCluster(distmatrix,n,method):
+    """Get hierarchical clusters from similarity matrix.
 
-    Using hierarchy cluster algorithm to get clusters from similarity matrix.
-    now support three methods: "single", "complete", "average".
+    Using hierarchical cluster algorithm to get clusters from similarity matrix.
+    now support three methods: single-linked, complete-linked, average-linked.
 
     The function is coded by 'FrankOnly'. More details in "https://github.com/Frankonly/DataMining/tree/master/CD%20algorithm"
 
     Args:
         distmatrix: A similarity matrix. If vertix i and vertix j are not connected, set distmatrix[i][j] = distmatrix[j][i] = -1 .
         n: The number of clusters after clustering.
-        method: the algorithm used, "single", "complete" or "average".
+        method: A cluster algorithm used. "single", "complete" or "average".
 
     Returns:
         A 2-d list presents clusters. Each list contains indices of vertices.
@@ -64,4 +64,4 @@ test_data = [[0,662,877,255,412,966],[662,0,295,468,268,400],[877,295,0,754,564,
 [255,468,754,0,219,869],[412,268,564,219,0,669],[996,400,138,869,669,0]]
 
 # test run
-print(hierarchyCluster(test_data, 3, "average"))
+print(hierarchicalCluster(test_data, 3, "average"))
