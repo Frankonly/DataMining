@@ -13,7 +13,7 @@ def SLCluster(distmatrix,k):
         for i in range(len(newDist)):
             if not abandon[i]:
                for j in range(i+1,len(newDist[i])):
-                    if not abandon[j] and newDist[i][j] < minDist and newDist[i][j] != 0: # newDist[i][j] == 0 means there is no edge between the two vertices.
+                    if not abandon[j] and newDist[i][j] < minDist and newDist[i][j] != -1: # -1 means there is no edge between the two vertices.
                         minDist,x,y=newDist[i][j],i,j
         if minDist == 1000:
             print("can't merge anymore")
@@ -22,10 +22,10 @@ def SLCluster(distmatrix,k):
             x,y = y,x
         abandon[y] = True
         for i in range(len(newDist[x])):
-            if not abandon[i] and i != x: # newDist[i][j] == 0 means no edge between the two vertices.
-                if newDist[x][i] == 0:
+            if not abandon[i] and i != x: # -1 means no edge between the two vertices.
+                if newDist[x][i] == -1:
                     newDist[x][i] = newDist[i][x] = newDist[y][i]
-                elif newDist[y][i] == 0:
+                elif newDist[y][i] == -1:
                     newDist[x][i] = newDist[i][x] = newDist[x][i]
                 else:
                     newDist[x][i] = newDist[i][x] = min(newDist[x][i],newDist[y][i])
