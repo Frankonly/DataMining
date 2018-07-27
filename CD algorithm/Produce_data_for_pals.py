@@ -20,7 +20,7 @@ def export_edge_list(sim, filename, delim = ",", header = True, labels = Config.
     return
 #produce community.dat
 def export_community_list(communities, filename, labels=Config.labels):
-    f = open("pals-community.dat", 'w')
+    f = open(filename, 'w')
     indices_in_community = []   
     cur_com = 1
     for c in communities:
