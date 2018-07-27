@@ -43,19 +43,18 @@ def hierarchicalCluster(distmatrix,n,method):
         abandon[y] = True
         for i in range(len(newDist[x])):
             if not abandon[i] and i != x:
-                if method == "average":
-                    newDist[x][i] = newDist[i][x] = (max(0, newDist[x][i]) * len(clusters[x]) + max(0, newDist[y][i]) * len(clusters[y])) \
-                    / (len(clusters[x]) + len(clusters[y]))
+                if newDist[x][i] == -1:
+                    newDist[x][i] = newDist[i][x] = newDist[y][i]
+                elif newDist[y][i] == -1:
+                    newDist[x][i] = newDist[i][x] = newDist[x][i]
                 else:
-                    if newDist[x][i] == -1:
-                        newDist[x][i] = newDist[i][x] = newDist[y][i]
-                    elif newDist[y][i] == -1:
-                        newDist[x][i] = newDist[i][x] = newDist[x][i]
+                    if method == "single":
+                        newDist[x][i] = newDist[i][x] = min(newDist[x][i],newDist[y][i])
+                    elif method == "complete":
+                        newDist[x][i] = newDist[i][x] = max(newDist[x][i],newDist[y][i])
                     else:
-                        if method == "single":
-                            newDist[x][i] = newDist[i][x] = min(newDist[x][i],newDist[y][i])
-                        else:
-                            newDist[x][i] = newDist[i][x] = max(newDist[x][i],newDist[y][i])
+                        newDist[x][i] = newDist[i][x] = (newDist[x][i] * len(clusters[x]) + newDist[y][i] * len(clusters[y])) \
+                        / (len(clusters[x]) + len(clusters[y]))
         clusters[x].extend(clusters[y])
     finalClusters = [clusters[i] for i in range(len(clusters)) if not abandon[i]]
     return finalClusters
