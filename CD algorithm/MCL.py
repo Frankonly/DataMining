@@ -6,6 +6,9 @@ from matplotlib.pylab import show, cm, axis
 import scipy.sparse as sp
 
 """
+library needed:
+!pip install markov_clustering[drawing]
+
 more details about the mc library on https://github.com/GuyAllard/markov_clustering
 """
 
