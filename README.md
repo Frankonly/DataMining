@@ -3,3 +3,4 @@
 * 7-25:选用电影人物截图作为dataset，完整地用自己的数据集跑了多次代码，对结果和失败的成因做了分析，安排今晚分工：gephi、图像预处理、层次聚类可视化、做poster准备展示。
 * 7-26：完成poster和ppt，数据集预处理，Gephi数据导出导入、图像生成，尝试层次聚类的库和画图，手写完成single-linked cluster、complete-linked cluster、average-linked cluster，对cd结果进行分析。安排：继续尝试层次聚类过程可视化，分析single-linkek cd之后的结果，考虑进下一个项目。
 * 7-27 阅读孪生神经网络代码，使用MCL进行CD，尝试调神经网络参数，debug CD代码。明天早上进一步工作的安排，提高效率。
+* 7-28 重新训练模型，得到了目前最好的训练结果，使用不同CD算法进行Clustering，调参得到更好的结果，目前MCL算法效果最好。明天休息、自由活动，这两天进行community分析，周一汇总。
