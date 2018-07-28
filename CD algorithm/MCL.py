@@ -5,6 +5,9 @@ import numpy
 from matplotlib.pylab import show, cm, axis
 import scipy.sparse as sp
 
+"""
+more details about the mc library on https://github.com/GuyAllard/markov_clustering
+"""
 
 def draw_graph(matrix, clusters, **kwargs):
 
