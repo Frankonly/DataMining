@@ -1,5 +1,5 @@
 # DataMining
-This the hub used for a community detection project of summer school in NUS. Part of code is provided by professor Kal.
+This the hub used for a community detection project of summer school in NUS. Part of ipynb code is provided by professor Kal.
 Thanks for professor Leong, professor Kal and other three team members.
 
 I recorded what we have done every day.
