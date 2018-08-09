@@ -1,5 +1,5 @@
 # DataMining
-### This the hub used for a community detection project of summer school in NUS.
+### This hub is used for a community detection project of summer school in NUS.
 
 Part of ipynb code is provided by professor Kal.
 
