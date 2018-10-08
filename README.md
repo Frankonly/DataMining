@@ -1,6 +1,10 @@
 # DataMining
-### This hub is used for a community detection project of summer school in NUS.
+### This hub is created for a community detection project of summer school in NUS. Now it is used for data mining
+There are two main categories：community detection and decision tree.
 
+
+
+------origin readme------
 Part of ipynb code is provided by professor Kal.
 
 Thanks for professor Leong, professor Kal and other three team members.
