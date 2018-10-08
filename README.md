@@ -2,13 +2,13 @@
 ### This hub is created for a community detection project of summer school in NUS. Now it is used for data mining
 There are two main categories：community detection and decision tree.
 
-
+#
 
 ------origin readme------
+
 Part of ipynb code is provided by professor Kal.
 
 Thanks for professor Leong, professor Kal and other three team members.
-#
 Following is what we have done every day：
 * 7-23:计划和讨论项目roadmap，头脑风暴，选择研究对象。
 * 7-24:图片格式转换，python、matlab裁剪图片、处理图片属性，手动获取训练集，完成single-linked cluster算法，graph生成。完成不同歌手的唱片封面相似度CD。
