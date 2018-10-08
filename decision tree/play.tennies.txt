@@ -1,0 +1,14 @@
+sunny hot no
+sunny hot no
+overcast hot yes
+rainy mild yes
+rainy cool yes
+rainy cool no
+overcast cool yes
+sunny mild no
+sunny cool yes
+rainy mild yes
+sunny mild yes
+overcast mild yes
+overcast hot yes
+rainy mild no

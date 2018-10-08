@@ -1,0 +1,14 @@
+sunny hot 12.0 FALSE no
+sunny hot 11.0 TRUE no
+overcast hot 11.0 FALSE yes
+rainy mild 13.0 FALSE yes
+rainy cool 7.2 FALSE yes
+rainy cool 7.9 TRUE no
+overcast cool 7.0 TRUE yes
+sunny mild 22.0 FALSE no
+sunny cool 1.9 FALSE yes
+rainy mild 3.3 FALSE yes
+sunny mild 2.3 TRUE yes
+overcast mild 31.0 TRUE yes
+overcast hot 4.0 FALSE yes
+rainy mild 13.0 TRUE no
