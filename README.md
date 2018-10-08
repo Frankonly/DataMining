@@ -1,5 +1,5 @@
 # DataMining
-### This hub is created for a community detection project of summer school in NUS. Now it is used for data mining
+This hub is created for a community detection project of summer school in NUS. Now it is used for data mining
 There are two main categories：community detection and decision tree.
 
 #
